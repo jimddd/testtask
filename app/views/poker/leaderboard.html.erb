@@ -1,0 +1,32 @@
+<style>
+
+</style>
+
+<div class="header">
+  <h1><%= @event.title %></h1>
+</div>
+
+
+<div class="players">
+  <div class="wrapper">
+    <% @event.players.limit(9).each do |player| %>
+      <div class="player-item">
+        <place><%= player.place %></place>
+        <ordinal><%= player.place.ordinal %></ordinal>
+        <name><%= player.name %></name>
+        <prize><%= number_to_currency(player.prize, precision: 0) %></prize>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="total">
+  <text>
+    <%= @event.entrants %> Entries
+    -
+    <%= number_to_currency(@event.prize_pool, precision: 0) %>  Prize Pool
+  </text>
+</div>
+
+<img src="/assets/footer.png" />

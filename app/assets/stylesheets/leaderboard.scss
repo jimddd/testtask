@@ -1,0 +1,81 @@
+#container {
+  font-family: 'TT Norms Pro';
+  width: 1028px;
+  height: 830px;
+  margin: 125px auto;
+  text-align: center;
+  .header {
+    height: 110px;
+    background: linear-gradient(0deg, #C7C8C7 7.08%, #F8F9F9 91.98%);
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 110px;
+      text-transform: uppercase;
+      overflow: hidden;
+      height: 110px;
+    }
+  }
+  .players {
+    height: 524px;
+    background: #333;
+    color: #FFF;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    .wrapper {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .player-item {
+      font-size: 34px;
+      font-weight: 500;
+      padding: 6px 80px;
+      margin: 0 5px;
+      text-align: left;
+      display: flex;
+      + {
+        .player-item {
+          border-top: 1px solid #939393;
+        }
+      }
+      place {
+        width: 20px;
+      }
+      ordinal {
+        text-transform: uppercase;
+        font-size: 24px;
+        width: 60px;
+        padding-top: 9px;
+      }
+      name {
+        text-transform: uppercase;
+        width: 620px;
+      }
+      prize {
+        width: 160px;
+        text-align: center;
+        font-weight: 700;
+      }
+    }
+  }
+  .total {
+    height: 44px;
+    background: linear-gradient(0deg, #C7C8C7 -39.62%, #F8F9F9 100%);
+    color: #000;
+    text-align: center;
+    font-size: 26px;
+    text {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      text-transform: uppercase;
+      line-height: 44px;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
